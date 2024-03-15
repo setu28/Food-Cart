@@ -1,0 +1,60 @@
+
+<div className="search-container p-5 bg-pink-50 my-5">
+  <input
+  type="text"
+  className="search-input"
+  value={searchtext}
+  onChange={(e) => {
+      setsearchtext(e.target.value);
+  }}
+  />
+  
+  <button className="p-2 m-2 bg-purple-900 text-white rounded-fu"
+  onClick={()=>{
+      const data = filterdata(searchtext,restaurants);
+      setrestaurantsfiltered(data);
+  }}
+  >search</button>
+  <input value={user.name} onChange={
+    e=> setUser({
+      name: e.target.value,
+    })
+  }></input>
+
+
+</div>
+
+
+
+
+
+
+
+
+import React from "react";
+import { Carousel, IconButton } from "@material-tailwind/react";
+import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline"
+ 
+
+const Caraousel = () =>{
+return(
+     <div className="flex">
+        <Carousel className="rounded-xl">
+        <img width="260" height="260" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/pneknawbadtvceqzwiep" class="_1gDnr" />
+       
+      
+        </Carousel>
+        <img width="260" height="260" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/zpkkdkmvlj5cuvqbc50t" class="_1gDnr"></img>
+        <img width="260" height="260" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/lzkjv3sxwwjkzg0vxpvt" />
+        <img width="260" height="260" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/tgnvusbs3fnzz7xupeno" />
+        <img width="260" height="260" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/nhubtkw7dukg3ukcmpam" class="_1gDnr"></img>
+    
+
+
+    </div>
+)
+
+
+}
+
+export default Caraousel;
